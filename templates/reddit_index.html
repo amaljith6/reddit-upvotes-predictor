@@ -1,0 +1,33 @@
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>reddit comment popularity</title>
+
+  <!-- Loading font types -->
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+</head>
+
+<body onload="myFunction()>
+ <div class="login">
+	<h1>popularity of your comment?</h1>
+
+<!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input id='text' type="text" name="text" placeholder="Enter your text" required="required" size="25" style="font-size:25px;"/>
+
+      <button id='button' type="submit" class="btn btn-primary btn-block btn-large" style="font-size: 20px;"> Predict</button>
+    </form>
+    <h3>{{ reddit_predict }} </h3>
+    
+    </div>
+		<center><h2>Made by technocolabs team1 </h2> </center>											    
+</body>
+</html>
+    
